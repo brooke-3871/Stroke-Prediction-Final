@@ -29,9 +29,19 @@ The highlights from this EDA is that the health demographics included were all s
 
 As previously mentioned this is a classification problem, I used the sklearn library to import and use the Random Forest Classifier, Decision Tree Classifier, K Nearest Neighbor, and Gradient Boosting Classifier. I tested and tuned all 4 models to determine which has the best predicting power. In this phase of analysis I also determined which performance metric to focus on. In this instance we want to focus on the True positives, or those who are predicted to have a stroke as those are the at risk patients. This leads to focusing on the recall or sensitivity of the model opposed to the precision. 
 
-[![Screen-Shot-2021-10-27-at-3-38-19-PM.png](https://i.postimg.cc/wMTXJj9N/Screen-Shot-2021-10-27-at-3-38-19-PM.png)](https://postimg.cc/r03R2c0y)
+[![Screen-Shot-2021-11-02-at-3-42-56-PM.png](https://i.postimg.cc/prqVBhL4/Screen-Shot-2021-11-02-at-3-42-56-PM.png)](https://postimg.cc/FkkQrKcV)
 
 Above is the comparison of recall scores after tuning the models. It is clear the that winner in this scenario is the Random Forrest Classifier. 
+
+To verify that the model is predicting and not just following the discrpencies in stroke and non stroke patients. Compared two confusion matrices to verify, the first is the best model, Random Forest confusion matrix
+
+[![Screen-Shot-2021-11-02-at-3-47-51-PM.png](https://i.postimg.cc/QCkmYD2R/Screen-Shot-2021-11-02-at-3-47-51-PM.png)](https://postimg.cc/5Qy8jhN3)
+
+Compared to the confusion matrix with the test set and a ratio of stroke to non stroke patients
+
+[![Screen-Shot-2021-11-02-at-3-49-45-PM.png](https://i.postimg.cc/KYBMDfSW/Screen-Shot-2021-11-02-at-3-49-45-PM.png)](https://postimg.cc/8Fkc1hCd)
+
+It is clear to see that even if the model doesnt have the best predictive power, it is predicting better than the basic occurance of stroke.
 
 
 ## 5. Improvements
